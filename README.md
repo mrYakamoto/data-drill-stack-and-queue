@@ -16,9 +16,9 @@ In this challenge, we will explore two of the more common abstract data structur
 * [Data Structures on Wikipedia](http://en.wikipedia.org/wiki/List_of_data_structures)
 
 ## Learning Goals
-* Understanding the types of data structures
-* Implement the Stack and Queue data structures in Ruby
-* Determining when to use a particular data structure.
+* Understand the types of data structures.
+* Implement the Stack and Queue data structures in Ruby.
+* Determine when to use a particular data structure.
 
 ## As you're coding, ask yourself...
 * Do I understand this data structure?
@@ -64,36 +64,36 @@ Complete the following steps:
 * Test the Stack class code by writing code to create a new Stack and add and remove data from it. Try running the following commands on your Stack class, then make up a few of your own.
 
 ```ruby
-#create a new stack
+# create a new stack
 my_stack=Stack.new;
 
-#verify there are no elements on the new stack
+# verify there are no elements on the new stack
 puts "The stack is empty? #{my_stack.empty?}"
 
-#add 3 elements to the stack
+# add 3 elements to the stack
 my_stack.push("ruby")
 my_stack.push("is")
 my_stack.push("cool")
 
-#since our stack is implemented on array we can add any type of object
+# since our stack is implemented on array we can add any type of object
 my_stack.push(15)
 
-#look at all the elements in the stack by popping them off one at time
+# look at all the elements in the stack by popping them off one at time
 
-	puts "Next Element: #{my_stack.pop}"
-	puts "Next Element: #{my_stack.pop}"
-	puts "Next Element: #{my_stack.pop}"
-	puts "Next Element: #{my_stack.pop}"
+puts "Next Element: #{my_stack.pop}"
+puts "Next Element: #{my_stack.pop}"
+puts "Next Element: #{my_stack.pop}"
+puts "Next Element: #{my_stack.pop}"
 
-#verify there are no elements left on the stack
+# verify there are no elements left on the stack
 puts "The stack is empty? #{my_stack.empty?}"
 
-#what happens if you try to call pop on an empty stack?
+# what happens if you try to call pop on an empty stack?
 puts "Trying to remove an item from an empty stack ... "
-	puts "Next Element: #{my_stack.pop}"
+puts "Next Element: #{my_stack.pop}"
 ```
 
-* You may have noticed that there is no method to display a particular item in the stack (ie - you can't write `puts my_stack[i]` . Why is this?
+* You may have noticed that there is no method to display a particular item in the stack (ie - you can't write `puts my_stack[i]`. Why is this?
 
 **Now it's your turn.** The stack in this example has an infinite size. This may not always be an appropriate model.
 
@@ -118,7 +118,7 @@ Upload a gist with your Queue class and the code you wrote to show how it works.
 * What functionality do I still need to implement in my abstract data structures?
 * Why doesn't Ruby have a built in stack, queue, or other abstract data structure?
 * Is there array functionality that is not implemented in my class? Does it need to be?
-* If someone asked me to implement a Propositional Directed Acyclic Graph using an array (or something equally scary) how would I use what I had learned in this challenge to break down that problem?
+* If someone asked me to implement a [Propositional Directed Acyclic Graph](http://en.wikipedia.org/wiki/Propositional_directed_acyclic_graph) using an array (or something equally scary) how would I use what I had learned in this challenge to break down that problem?
 
 ##Releases
 ###Release 0
