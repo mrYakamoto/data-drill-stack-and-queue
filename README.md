@@ -2,6 +2,10 @@
 
 ##Learning Competencies
 
+* Understand the types of data structures.
+* Implement the Stack and Queue data structures in Ruby.
+* Determine when to use a particular data structure.
+
 ##Summary
 
 A **data structure** is a particular way of storing and organizing data so that it can be used efficiently. Data structures are usually categorized as primitive, composite or abstract.
@@ -12,20 +16,9 @@ When working with data, there is often a particular problem pattern or setting i
 
 In this challenge, we will explore two of the more common abstract data structures, the Stack and the Queue and understand how and when to implement them in Ruby.
 
-## External Resources
-* [Data Structures on Wikipedia](http://en.wikipedia.org/wiki/List_of_data_structures)
+##Releases
 
-## Learning Goals
-* Understand the types of data structures.
-* Implement the Stack and Queue data structures in Ruby.
-* Determine when to use a particular data structure.
-
-## As you're coding, ask yourself...
-* Do I understand this data structure?
-* Could I explain it to my state senator in two or three sentences?
-
-## Objectives
-### Understanding Data Structures
+###Release 0 : Understanding Data Structures
 
 There are many abstract data structures, each suited to a particular data need. When working with data, it is good to have a set of these structures in your toolbox and be easily able to answer the questions:
 
@@ -43,7 +36,7 @@ For each one, write down what it is in your own words, draw a picture of it or w
 
 Make sure you clearly understand each structure and can clearly explain it to your pair (and a teacher) before moving on.
 
-### Implementing a stack in Ruby.
+###Release 1 : Implementing a stack in Ruby.
 From your reading above, you know that a stack is an abstract data structure with methods `push` to add data and `pop` to remove data and that uses the Last-In-First-Out (LIFO) rule to add and remove data. Some implementations also have a function which returns the current length of the stack. Another typical helper operation is `top` (also known as `peek`) can return the current top element of the stack without removing it.
 
 You can visualize a stack as a stack of plates where the last plate you put on the stack is the first one you would pull off when it's time to eat dinner.
@@ -101,7 +94,7 @@ puts "Next Element: #{my_stack.pop}"
 * Implement a full? method
 * Do not allow the stack to store more than it's max_size of elements.
 
-### Implement a Queue with an Array
+###Release 2 : Implement a Queue with an Array
 
 Now it's your turn.
 
@@ -113,16 +106,18 @@ Next, write code to instantiate your Queue class and call its methods similar to
 
 Upload a gist with your Queue class and the code you wrote to show how it works.
 
-## After you're done, ask yourself...
-
-* What functionality do I still need to implement in my abstract data structures?
-* Why doesn't Ruby have a built in stack, queue, or other abstract data structure?
-* Is there array functionality that is not implemented in my class? Does it need to be?
-* If someone asked me to implement a [Propositional Directed Acyclic Graph](http://en.wikipedia.org/wiki/Propositional_directed_acyclic_graph) using an array (or something equally scary) how would I use what I had learned in this challenge to break down that problem?
-
-##Releases
-###Release 0
-
 ##Optimize Your Learning
 
+As you're coding, ask yourself...
+  * Do I understand this data structure?
+  * Could I explain it to my state senator in two or three sentences?
+
+After you're done, ask yourself...
+  * What functionality do I still need to implement in my abstract data structures?
+  * Why doesn't Ruby have a built in stack, queue, or other abstract data structure?
+  * Is there array functionality that is not implemented in my class? Does it need to be?
+  * If someone asked me to implement a [Propositional Directed Acyclic Graph](http://en.wikipedia.org/wiki/Propositional_directed_acyclic_graph) using an array (or something equally scary) how would I use what I had learned in this challenge to break down that problem?
+
 ##Resources
+
+* [Data Structures on Wikipedia](http://en.wikipedia.org/wiki/List_of_data_structures)
