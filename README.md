@@ -5,6 +5,7 @@
 * Understand the types of data structures.
 * Implement the Stack and Queue data structures in Ruby.
 * Determine when to use a particular data structure.
+* Write tests to handle edge cases in your code
 
 ##Summary
 
@@ -54,37 +55,14 @@ Complete the following steps:
 * Copy the code in the [Basic Implementation of stack]
 (https://gist.github.com/dbc-challenges/4988728) into your own stack.rb file.
 * Look through the Stack class code and note how the key factors of a stack are implemented. Discuss each method with your pair so you fully understand how it works.
-* Test the Stack class code by writing code to create a new Stack and add and remove data from it. Try running the following commands on your Stack class, then make up a few of your own.
+* Test the Stack class code by writing your own specs to create a new Stack and add and remove data from it.
 
-```ruby
-# create a new stack
-my_stack=Stack.new;
-
-# verify there are no elements on the new stack
-puts "The stack is empty? #{my_stack.empty?}"
-
-# add 3 elements to the stack
-my_stack.push("ruby")
-my_stack.push("is")
-my_stack.push("cool")
-
-# since our stack is implemented on array we can add any type of object
-my_stack.push(15)
-
-# look at all the elements in the stack by popping them off one at time
-
-puts "Next Element: #{my_stack.pop}"
-puts "Next Element: #{my_stack.pop}"
-puts "Next Element: #{my_stack.pop}"
-puts "Next Element: #{my_stack.pop}"
-
-# verify there are no elements left on the stack
-puts "The stack is empty? #{my_stack.empty?}"
-
-# what happens if you try to call pop on an empty stack?
-puts "Trying to remove an item from an empty stack ... "
-puts "Next Element: #{my_stack.pop}"
-```
+  * verify there are no elements on a new stack
+  * push 3 elements onto the stack and verify the length
+  * since our stack is implemented on array verify we can add any type of object
+  * look at all the elements in the stack by popping them off one at time
+  * verify there are no elements left on the stack once it is empty
+  * what happens if you try to call pop on an empty stack?
 
 * You may have noticed that there is no method to display a particular item in the stack (ie - you can't write `puts my_stack[i]`. Why is this?
 
