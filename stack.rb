@@ -15,7 +15,7 @@ class Stack
     store.pop
   end
 
-  def top
+  def peek
     store.last
   end
 
