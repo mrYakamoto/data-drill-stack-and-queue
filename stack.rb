@@ -1,4 +1,6 @@
 class Stack
+  class UnderflowError < StandardError; end
+
   def initialize
     @store = Array.new
   end
@@ -12,6 +14,7 @@ class Stack
   end
 
   def pop
+    raise(UnderflowError, "There is no element to remove from the stack") if empty?
     store.pop
   end
 
