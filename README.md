@@ -8,70 +8,41 @@ Like arrays, stacks and queues are collections (i.e., they're objects that conta
 ### Stack
 Stacks have two primary behaviors: *push* and *pop*.  In other words, we add elements to the stack, and we remove them.  The defining feature of a stack is how we add and remove elements.  When we push an element onto the stack, we can only place it on the top of the stack.  When we pop an element from the stack, we can only remove the top-most element.  We'll might see this behavior pattern referred to as *last in, first out*.
 
+
 ### Queue
 Queues also have two primary behaviors: *enqueue* and *dequeue*.  Again, adding elements and removing elements.  We add elements to the end of the queue and remove them from the front of the queue.  A queue follows a *first in, first out* pattern.  In other words, elements are removed from a queue in the same order as they are added.
 
 
 ## Releases
-### Release 0: Implementing a stack in Ruby.
-From your reading above, you know that a stack is an abstract data structure with methods `push` to add data and `pop` to remove data and that uses the Last-In-First-Out (LIFO) rule to add and remove data. Some implementations also have a function which returns the current length of the stack. Another typical helper operation is `top` (also known as `peek`) can return the current top element of the stack without removing it.
+### Release 0: Document Stack Behaviors.
+In the `stack.rb` file, we're presented with a working `Stack` class.  The class includes behaviors for pushing elements to the stack and popping them off the stack.  In addition, our class includes a couple additional behaviors that can be found in different stack implementations:  peeking at the item on the top of the stack and reporting whether or not the stack is empty.
 
-You can visualize a stack as a stack of plates where the last plate you put on the stack is the first one you would pull off when it's time to eat dinner.
+Notice how we build our `Stack` class out of a normal `Array` object.  Behind the scenes, our `Stack` class holds its elements in an array.  But we control how users can interact with that array by keeping it internal to a stack and only allowing the behaviors that a stack would have.
 
-So how do we use a stack in Ruby?
+We already have a working stack, but we need to document its behaviors through tests.  Thoroughly test each of the methods.
 
-Since Ruby only has an array and hash built in, you have to implement the other abstract data structures by building a class that has the correct behavior through its methods and that uses either an array or a hash to store the data.
 
-For example, you could implement a stack by creating a class that contains an array to store the elements and uses the methods to `push` and `pop` to add and remove the data from the front of the array.
+### Release 1:  Expand Stack Behaviors
+We're going to add some behaviors to our `Stack` class.  We have some behaviors that related to the number of items in a stack.  We can ask a stack whether it's empty.  In addition, we raise an error if we try to pop an element off an empty stack.
 
-Since your Stack class is not an array, (even though it uses an array to store its data) you will also have to directly implement the needed array methods like `size` , `each`, `first`, `last` and whatever other functionality you need.
+We're going to add some additional behaviors related to the number of items in a stack.  These behaviors need to be fully documented in our test suite.
 
-Complete the following steps:
+- A stack should be created with a maximum size.
+- A stack should report whether it's full.
+- A stack should raise an error if we push an element onto a full stack.
+- A stack should report how many elements are on the stack.
 
-* Copy the code in the [Basic Implementation of stack]
-(https://gist.github.com/dbc-challenges/4988728) into your own stack.rb file.
-* Look through the Stack class code and note how the key factors of a stack are implemented. Discuss each method with your pair so you fully understand how it works.
-* Test the Stack class code by writing your own specs to create a new Stack and add and remove data from it.
 
-  * verify there are no elements on a new stack
-  * push 3 elements onto the stack and verify the length
-  * since our stack is implemented on array verify we can add any type of object
-  * look at all the elements in the stack by popping them off one at time
-  * verify there are no elements left on the stack once it is empty
-  * what happens if you try to call pop on an empty stack?
+### Release 2: Implement a Queue with an Array
+Using our stack implementation as an example, let's implement a `Queue` class.  At a minimum, our implementation needs the following behaviors—each of which should be documented in tests.
 
-* You may have noticed that there is no method to display a particular item in the stack (ie - you can't write `puts my_stack[i]`. Why is this?
+- Add elements to a queue.
+- Remove elements to a queue.
+- Report whether a queue is empty.
+- Peek at the element at the front of the queue.
 
-**Now it's your turn.** The stack in this example has an infinite size. This may not always be an appropriate model.
 
-* Refactor the stack.rb code so that a stack is created with a max_size.
-* Implement a full? method
-* Do not allow the stack to store more than it's max_size of elements.
+## Conclusion
+Do we understand what stacks and queues are?  Could we explain them to someone with a non-technical background (e.g., without referencing arrays)?  What are some real-world situations that could be modeled as either a stack or a queue?
 
-### Release 1: Implement a Queue with an Array
 
-Now it's your turn.
-
-A queue is a data structure that utilizes the First-In-First-Out (FIFO) data model and allows data to be added to the end of the queue *enqueue* and data to be removed from the front of the queue *dequeue*.
-
-Using the stack example as a model, write a class to implement a queue with an array.
-
-Next, write code to instantiate your Queue class and call its methods similar to what we did with the Stack class.
-
-Upload a gist with your Queue class and the code you wrote to show how it works.
-
-## Optimize Your Learning
-
-As you're coding, ask yourself...
-  * Do I understand this data structure?
-  * Could I explain it to my state senator in two or three sentences?
-
-After you're done, ask yourself...
-  * What functionality do I still need to implement in my abstract data structures?
-  * Why doesn't Ruby have a built in stack, queue, or other abstract data structure?
-  * Is there array functionality that is not implemented in my class? Does it need to be?
-  * If someone asked me to implement a [Propositional Directed Acyclic Graph](http://en.wikipedia.org/wiki/Propositional_directed_acyclic_graph) using an array (or something equally scary) how would I use what I had learned in this challenge to break down that problem?
-
-## Resources
-
-* [Data Structures on Wikipedia](http://en.wikipedia.org/wiki/List_of_data_structures)
