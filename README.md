@@ -1,27 +1,20 @@
-# Data Drill Stack And Queue
+# Data Drill: Stack and Queue
+## Summary
+In this challenge, we will explore two common data structures: stacks and queues.  We'll begin by understanding how each works and then we'll implement them in Ruby.
 
-##Learning Competencies
+Like arrays, stacks and queues are collections (i.e., they're objects that contain other objects).  However, arrays provide a more flexible interface than either stacks or queues.  We can add elements to an array at the front, at the end, or in the middle.  Similarly, we can access and remove elements from anywhere in the array.  Stacks and queues, meanwhile, have a more specialized set of behaviors, which we'll explore.  The specialization centers around how we add elements to and remove elements from each data type.
 
-* Understand the types of data structures.
-* Implement the Stack and Queue data structures in Ruby.
-* Determine when to use a particular data structure.
-* Write tests to handle edge cases in your code
 
-##Summary
+### Stack
+Stacks have two primary behaviors: *push* and *pop*.  In other words, we add elements to the stack, and we remove them.  The defining feature of a stack is how we add and remove elements.  When we push an element onto the stack, we can only place it on the top of the stack.  When we pop an element from the stack, we can only remove the top-most element.  We'll might see this behavior pattern referred to as *last in, first out*.
 
-A **data structure** is a particular way of storing and organizing data so that it can be used efficiently. Data structures are usually categorized as primitive, composite or abstract.
+### Queue
+Queues also have two primary behaviors: *enqueue* and *dequeue*.  Again, adding elements and removing elements.  We add elements to the end of the queue and remove them from the front of the queue.  A queue follows a *first in, first out* pattern.  In other words, elements are removed from a queue in the same order as they are added.
 
-A **primitive data structure** is provided by the language and can be used as a building block for composite and abstract data structures. A **composite data structure** is composed of primitive data structures. In Ruby, there are two composite data structures; arrays and hashes. They provide simple index or key based data storage.
 
-When working with data, there is often a particular problem pattern or setting in which we need to access data in a specific way that is not built into an array or a hash. We can then create an **abstract data structure** to implement this pattern. An abstract data structure is defined by the operations that may be performed on it but does not define how it is implemented or which primitive or composite types are used for the implementation.
-
-In this challenge, we will explore two of the more common abstract data structures, the Stack and the Queue and understand how and when to implement them in Ruby.
-
-##Releases
-
-###Release 0 : Understanding Data Structures
-
-There are many abstract data structures, each suited to a particular data need. When working with data, it is good to have a set of these structures in your toolbox and be easily able to answer the questions:
+## Releases
+### Release 0: Understanding Data Structures
+and be easily able to answer the questions:
 
 * What is the best way to store this data?
 * What is the best way to access this data?
@@ -36,6 +29,7 @@ Read over the list of [Data Structures on Wikipedia](http://en.wikipedia.org/wik
 For each one, write down what it is in your own words, draw a picture of it or work through the examples and code.
 
 Make sure you clearly understand each structure and can clearly explain it to your pair (and a teacher) before moving on.
+
 
 ###Release 1 : Implementing a stack in Ruby.
 From your reading above, you know that a stack is an abstract data structure with methods `push` to add data and `pop` to remove data and that uses the Last-In-First-Out (LIFO) rule to add and remove data. Some implementations also have a function which returns the current length of the stack. Another typical helper operation is `top` (also known as `peek`) can return the current top element of the stack without removing it.
