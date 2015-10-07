@@ -13,25 +13,7 @@ Queues also have two primary behaviors: *enqueue* and *dequeue*.  Again, adding 
 
 
 ## Releases
-### Release 0: Understanding Data Structures
-and be easily able to answer the questions:
-
-* What is the best way to store this data?
-* What is the best way to access this data?
-
-Read over the list of [Data Structures on Wikipedia](http://en.wikipedia.org/wiki/List_of_data_structures) and notice how they are grouped. Try to think how each could be used to solve a particular pattern. Then look up the common data structures below:
-
-* Stack
-* Queue
-* Linked List
-* Set
-
-For each one, write down what it is in your own words, draw a picture of it or work through the examples and code.
-
-Make sure you clearly understand each structure and can clearly explain it to your pair (and a teacher) before moving on.
-
-
-###Release 1 : Implementing a stack in Ruby.
+### Release 0: Implementing a stack in Ruby.
 From your reading above, you know that a stack is an abstract data structure with methods `push` to add data and `pop` to remove data and that uses the Last-In-First-Out (LIFO) rule to add and remove data. Some implementations also have a function which returns the current length of the stack. Another typical helper operation is `top` (also known as `peek`) can return the current top element of the stack without removing it.
 
 You can visualize a stack as a stack of plates where the last plate you put on the stack is the first one you would pull off when it's time to eat dinner.
@@ -66,7 +48,7 @@ Complete the following steps:
 * Implement a full? method
 * Do not allow the stack to store more than it's max_size of elements.
 
-###Release 2 : Implement a Queue with an Array
+### Release 1: Implement a Queue with an Array
 
 Now it's your turn.
 
@@ -78,7 +60,7 @@ Next, write code to instantiate your Queue class and call its methods similar to
 
 Upload a gist with your Queue class and the code you wrote to show how it works.
 
-##Optimize Your Learning
+## Optimize Your Learning
 
 As you're coding, ask yourself...
   * Do I understand this data structure?
@@ -90,6 +72,6 @@ After you're done, ask yourself...
   * Is there array functionality that is not implemented in my class? Does it need to be?
   * If someone asked me to implement a [Propositional Directed Acyclic Graph](http://en.wikipedia.org/wiki/Propositional_directed_acyclic_graph) using an array (or something equally scary) how would I use what I had learned in this challenge to break down that problem?
 
-##Resources
+## Resources
 
 * [Data Structures on Wikipedia](http://en.wikipedia.org/wiki/List_of_data_structures)
