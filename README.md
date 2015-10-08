@@ -8,9 +8,13 @@ Like arrays, stacks and queues are collections (i.e., they're objects that conta
 ### Stack
 [Stacks][] have two primary behaviors: *push* and *pop*.  In other words, we add elements to the stack, and we remove them.  The defining feature of a stack is how we add and remove elements.  When we push an element onto the stack, we can only place it on the top of the stack.  When we pop an element from the stack, we can only remove the top-most element.  We might see this behavior pattern referred to as *last in, first out*.
 
+If the behavior of a stack is unclear, explore this [site where we can interact with a stack][stack animation].
+
 
 ### Queue
 [Queues][] also have two primary behaviors: *enqueue* and *dequeue*.  Again, adding elements and removing elements.  We add elements to the end of the queue and remove them from the front of the queue.  A queue follows a *first in, first out* pattern.  In other words, elements are removed from a queue in the same order as they are added.
+
+If the behavior of a queue is unclear, explore this [site where we can interact with a queue][queue animation].
 
 
 ## Releases
@@ -45,6 +49,7 @@ Using our stack implementation as an example, let's implement a `Queue` class.  
 ## Conclusion
 Do we understand what stacks and queues are?  Could we explain them to someone with a non-technical background (e.g., without referencing arrays)?  What are some real-world situations that could be modeled as either a stack or a queue?
 
-
+[stack animation]: http://www.cs.armstrong.edu/liang/animation/web/Stack.html
 [stacks]: https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
+[queue animation]: http://www.cs.armstrong.edu/liang/animation/web/Queue.html
 [queues]: https://en.wikipedia.org/wiki/Queue_(abstract_data_type)
