@@ -6,7 +6,7 @@ Like arrays, stacks and queues are collections (i.e., they're objects that conta
 
 
 ### Stack
-[Stacks][] have two primary behaviors: *push* and *pop*.  In other words, we add elements to the stack, and we remove them.  The defining feature of a stack is how we add and remove elements.  When we push an element onto the stack, we can only place it on the top of the stack.  When we pop an element from the stack, we can only remove the top-most element.  We'll might see this behavior pattern referred to as *last in, first out*.
+[Stacks][] have two primary behaviors: *push* and *pop*.  In other words, we add elements to the stack, and we remove them.  The defining feature of a stack is how we add and remove elements.  When we push an element onto the stack, we can only place it on the top of the stack.  When we pop an element from the stack, we can only remove the top-most element.  We might see this behavior pattern referred to as *last in, first out*.
 
 
 ### Queue
