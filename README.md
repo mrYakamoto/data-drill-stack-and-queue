@@ -37,11 +37,11 @@ We're going to add some additional behaviors related to the number of items in a
 - A stack should report how many elements are on the stack.
 
 
-### Release 2: Implement a Queue with an Array
+### Release 2: Implement a Queue
 Using our stack implementation as an example, let's implement a `Queue` class.  At a minimum, our implementation needs the following behaviors—each of which should be documented in tests.
 
 - Add elements to a queue.
-- Remove elements to a queue.
+- Remove elements from a queue.
 - Report whether a queue is empty.
 - Peek at the element at the front of the queue.
 
