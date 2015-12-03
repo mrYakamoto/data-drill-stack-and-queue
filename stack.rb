@@ -41,3 +41,9 @@ class Stack
   private
   attr_reader :store
 end
+
+p new_stack = Stack.new
+# p new_stack.pop
+p new_stack.peek
+p new_stack.empty?
+p new_stack.push("dog")
