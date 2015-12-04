@@ -22,38 +22,69 @@ describe Stack do
     end
 
     it 'raises an error when we try to pop an element' do
-     expect{stack.pop}.to raise_error(Stack::UnderflowError)
-   end
- end
+      expect{stack.pop}.to raise_error(Stack::UnderflowError)
+    end
 
- let(:full_stack) { $full_stack = Stack.new ; $full_stack.push("bottom") ; $full_stack.push("top") }
+    it 'size returns 0' do
+      size = stack.size
+      expect(size).to eq 0
+    end
 
- context 'when the stack is not empty' do
-  it 'tells us the stack is not empty' do
-    is_not_empty = full_stack.empty?
-    expect(is_not_empty).to eq false
+    it 'has a max size value' do
+      max_size = stack.instance_variable_get(:@max)
+      expect(max_size).to be > 0
+    end
   end
 
-  it 'returns the top element when using #peek' do
-    peek = full_stack.peek
-    expect(peek).to eq "top"
+
+  let(:two_stack) { $two_stack = Stack.new ; $two_stack.push("bottom") ; $two_stack.push("top") }
+
+  context 'when the stack is not empty' do
+    it 'tells us the stack is not empty' do
+      is_not_empty = two_stack.empty?
+      expect(is_not_empty).to eq false
+    end
+
+    it 'returns the top element when using #peek' do
+      peek = two_stack.peek
+      expect(peek).to eq "top"
+    end
+
+    it 'peek does not remove top element' do
+      peek = two_stack.peek
+      expect(peek).to eq two_stack.peek
+    end
+
+    it 'returns the top element with #pop' do
+      pop = two_stack.pop
+      expect(pop).to eq "top"
+    end
+
+    it 'top element is removed with #pop' do
+      pop = two_stack.pop
+      expect(pop).to_not eq two_stack.pop
+    end
+
+    it 'size returns 2' do
+      size = two_stack.size
+      expect(size).to eq 2
+    end
   end
 
-  it 'peek does not remove top element' do
-    peek = full_stack.peek
-    expect(peek).to eq full_stack.peek
-  end
+  let(:full_stack) { $full_stack = Stack.new(3) ; $full_stack.push("bottom") ; $full_stack.push("top") }
 
-  it 'returns the top element with #pop' do
-    pop = full_stack.pop
-    expect(pop).to eq "top"
-  end
+  context 'when stack is full' do
 
-  it 'top element is removed with #pop' do
-    pop = full_stack.pop
-    expect(pop).to_not eq full_stack.pop
+    it 'returns message upon filling up the stack' do
+      message = full_stack.push("draw")
+      expect(message).to eq "Stack is full"
+    end
+
+    it 'running #push returns an error' do
+      full_stack.push("draw")
+      expect{full_stack.push("drawen")}.to raise_error(Stack::OverflowError)
+    end
   end
- end
 end
 
 
